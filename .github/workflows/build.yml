@@ -18,9 +18,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
+        cache: gradle
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
@@ -33,3 +31,4 @@ jobs:
       with:
         name: DeadpoolAI-APK
         path: app/build/outputs/apk/debug/*.apk
+        
